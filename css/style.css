@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+:root {
+  --colorHeader: #7b6d99;
+  --colorAside: #edbf97;
+  --colorSectionMeme: #e3e3e3;
+  --colorTopText: #f3f0f4;
+  --colorAsideButton: #b1a0c7;
+  --colorButtonHover: #c51475;
+  --mainColorFont: #4614de;
+  --secondColorFont: #4614de;
+  --mainFont: "Londrina Solid", cursive;
+  --secondFont: "Open Sans Condensed", sans-serif;
+  --borderRadius: 15px;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--colorHeader);
+  width: 85%;
+  padding: 20px;
+}
+h1 {
+  font-family: var(--mainFont);
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.autor {
+  font-family: var(--mainFont);
+  color: var(--mainColorFont);
+  font-size: 1rem;
+}
+
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+ 
+  
+}
+
+ul button {
+  padding: 10px;
+  background-color: var(--colorButtonHover);
+  color: var(--color-texto);
+  font-size: 14px;
+  border: 2px solid var(--secondColorFont);
+  box-shadow: #0e032f 3px 3px;
+  border-radius: 5px;
+}
+ul button:hover {
+  background-color: #75777e89;
+}
+
+
+
+
+/* Main */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 40px 0;
+}
+
+.fondo_principal {
+  width: 35%;
+  margin-bottom: 20px;
+}
+
+.fondo_principal h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  padding: 30px;
+  font-size: 40px;
+  font-family: Impact;
+}
+
+.imagen_div {
+  height: 400px;
+  background-color: black;
+}
+
+.btn_dow_imagen {
+  background-color: var(--colorButtonHover);
+  color: var(--colorTopText);
+  border: 2px solid var(--secondColorFont);
+  box-shadow: #0e032f 3px 3px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+main button i {
+  padding: 5px;
+}
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  
+}
+
+.lateral {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #abacae;
+}
+input,
+select {
+  margin: 10px 0;
+  padding: 5px;
+}
+.ancho {
+  width: 30%;
+  margin-right: 5px;
+}
+::placeholder {
+  color: #e13e3e;
+}
+aside h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.contenedor_colores {
+  display: flex;
+}
+.selector_color {
+  width: 50%;
+  padding: 10px;
+}
+form h4 {
+  margin: 10px auto;
+}
+.margenes {
+  margin: 10px auto;
+}
+aside button {
+  background-color: var(--colorButtonHover);
+  color:wheat;
+  border: 2px solid var(--secondColorFont);
+  box-shadow: #0e032f 3px 3px;
+  
+}

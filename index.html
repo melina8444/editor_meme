@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Melina Yangüez">
+        <meta name="description" content="Puedes editar tus memes y descargar tus creaciones con esta aplicación.">
+        <meta name="keywords" content="editor,memes, imagen, texto, generador memes">
+        <!-- Facebook, Open graph -->
+        <meta property="og:title" content="Generador Memes">
+        <meta property="og:description" content="Puedes editar tus memes y descargar tus creaciones con esta aplicación.">
+        <meta property="og:type" content="article">
+        <meta property="og:site name" content="Generador de Memes">
+        <!-- <meta property="og:url" content="https://edimar-m.github.io/Generador-de-memes/."> -->
+        <meta property="og:image" content="">
+        <!-- Twitter -->
+        <!-- <meta property="twitter:url" content="https://edimar-m.github.io/Generador-de-memes/."> -->
+        <meta property="twitter:title" content="Melina Yangüez">
+        <meta property="twitter:description" content="Puedes editar tus memes y descargar tus creaciones con esta aplicación.">
+        <meta property="twitter:image" content="">
+        <!--Links-->
+        <link rel="favicon icon" href="./images/favicon.ico" type="image/x-icon">
+        <!-- para colocar iconos -->
+        <script src="https://kit.fontawesome.com/55eea74df4.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100&family=Open+Sans+Condensed:wght@300&family=Potta+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Hachi+Maru+Pop&family=Hanalei&family=Londrina+Solid:wght@100&family=Pacifico&family=Permanent+Marker&family=Potta+One&family=Shadows+Into+Light&family=Yusei+Magic&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="./css/style.css">
+        
+        <title>Editor de memes</title>
+    </head>
+
+<body>
+
+<header id="mi_header">
+    <h1>Generador de Memes&#x270D;<span class="autor">Melina Yangüez &#x1F498;</span></h1>
+    <nav>
+        <ul>
+            <li ><button id="boton_imagen"><i class="fa-regular fa-file-image"></i>Imágen</button></li>
+            <li ><button id="boton_texto"><i class="fa-solid fa-font"></i>Texto</button></li>
+            <li ><button id="boton_modo"><i class="fa-regular fa-lightbulb"></i><span id="icono">Modo oscuro</span></button></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <div id="fondo_principal" class="fondo_principal">
+            
+                <h2 id="h2_texto_superior">TOP TEXT</h2>
+            
+                
+            <div id="imagen_div" class="imagen_div">
+
+            </div>
+            
+           
+                <h2 id="h2_texto_inferior">BOTTOM TEXT</h2>
+            
+            
+        </div>
+        <button id="btn_download" class="btn_dow_imagen"><i class="fa-solid fa-download"></i>Descargar Meme</button>
+    </section>
+
+    <aside class="lateral" id="aside_texto">
+        <h3>TEXTO</h3>
+        <form action="#">
+            <label for="texto_superior_input">SUPERIOR</label><br>
+            <input name="texto_superior_input" placeholder="TOP TEXT" id="texto_superior_input"><br>
+
+            <input id="sin_texto_superior" type="checkbox">
+            <label for="sin_texto_superior">Sin texto superior</label><br>
+
+            <label for="texto_inferior_input">INFERIOR</label><br>
+            <input name="texto_inferior_input" placeholder="BOTTOM TEXT" id="texto_inferior_input"><br>
+
+            <input id="sin_texto_inferior" type="checkbox">
+            <label for="sin_texto_inferior">Sin texto inferior</label><br>
+
+            <label for="fuente">FUENTE</label><br>
+            <select id="tipo_fuente" name="tipo_fuente">
+                <option id="arial" value="arial">Arial</option>
+                <option id="arialblack" value="arialblack">Arial Black</option>
+                <option id="americantypewriter" value="americantypewriter">American Typewriter</option>
+                <option id="andalemono" value="andalemono">Andale Mono</option>
+                <option id="comicsansMs" value="comicsansMs">Comic Sans MS</option>
+                <option id="helvetica" value="helvetica">Helvetica</option>
+                <option id="impact" value="impact">Impact</option>
+                <option id="verdana" value="verdana">Verdana</option>
+                <option id="timesnewroman" value="timesnewroman">Times New Roman</option>
+            </select>
+
+            <input id="tamanio_fuente" class="ancho" type="number" placeholder="40">
+
+            <button type="button" id="boton_alinear_izquierda"><i id="botonAlinearIzquierda" class="fa-solid fa-align-left"></i></button>
+            <button type="button" id="boton_alinear_centro"><i id="botonAlinearCentro" class="fa-solid fa-align-center"></i></button>
+            <button type="button" id="boton_alinear_derecha"><i id="botonAlinearDerecha" class="fa-solid fa-align-right"></i></button>
+            
+            <div class="contenedor_colores">
+                <div class="selector_color">
+                    <h4>COLOR</h4>
+                    <input type="color" id="colorTexto">
+                </div>
+                <div class="selector_color">
+                    <h4>FONDO</h4>
+                    <input type="color" id="color_fondo_texto">
+                </div>
+            </div>
+
+            <input id="fondo_transparente" type="checkbox">
+            <label for="fondo_transparente">Fondo transparente</label>
+
+            <h4>CONTORNO</h4>
+            <button type="button">Ninguno</button>
+            <button type="button">Claro</button>
+            <button type="button">Oscuro</button>
+
+            <h4>ESPACIADO</label>
+            <input id="espaciado" type="number" placeholder="35">
+
+            <H4>INTERLINEADO</H4>
+            <select id="interliniado" name="interliniado">
+                <option id="ceroPuntoOcho" value="0">0.8</option>
+                <option id="uno" value="1">1</option>
+                <option id="unoPuntoDos" value="12">1.2</option>
+                <option id="unoPuntoCinco" value="15">1.5</option>
+                <option id="dos" value="2">2</option>
+                <option id="dosPuntoCinco" value="25">2.5</option>
+            </select>
+        </form>
+    </aside>
+
+    <aside class="lateral" id="aside_imagen">
+        <h3>IMÁGEN</h3>
+        <form action="#">
+            <label for="imagen_url_input">URL</label><br>
+            <input type="url" id="imagen_url_input" name="imagen_url_input">
+            <h4>FONDO</h4>
+            <input type="color" id="color_fondo_imagen">
+            <select id="efecto_fondo_imagen" name="efecto_fondo_imagen">
+                <option id="ninguno" value="ninguno">Ninguno</option>
+                <option id="aclarar" value="aclarar">Aclarar</option>
+                <option id="oscurecer" value="oscurecer">Oscurecer</option>
+                <option id="diferencia" value="diferencia">Diferencia</option>
+                <option id="luminosidad" value="luminosidad">Luminosidad</option>
+                <option id="multiplicar" value="multiplicar">Multiplicar</option>
+            </select>
+            <h4>FILTROS</h4>
+            <label for="brillo">Brillo</label><br>
+            <input class="margenes" type="range" id="brillo" min="0" max="100" step="1">
+            <br>
+            <label for="opacidad">Opacidad</label><br>
+            <input class="margenes" type="range" id="opacidad" min="0" max="100" step="1">
+            <br>
+            <label for="contraste">Contraste</label><br>
+            <input class="margenes" type="range" id="contraste" min="0" max="100" step="1">
+            <br>
+            <label for="desenfoque">Desenfoque</label><br>
+            <input class="margenes" type="range" id="desenfoque" min="0" max="100" step="1">
+            <br>
+            <label for="escala_de_grises">Escala De Grises</label><br>
+            <input class="margenes" type="range" id="escala_de_grises" min="0" max="100" step="1">
+            <br>
+            <label for="sepia">Sepia</label><br>
+            <input class="margenes" type="range" id="sepia" min="0" max="100" step="1">
+            <br>
+            <label for="hue">HUE</label><br>
+            <input class="margenes" type="range" id="hue" min="0" max="100" step="1">
+            <br>
+            <label for="saturado">Saturado</label><br>
+            <input class="margenes" type="range" id="saturado" min="0" max="100" step="1">
+            <br>
+            <label for="negativo">Negativo</label><br>
+            <input class="margenes" type="range" id="negativo" min="0" max="100" step="1">
+        </form>
+        <button id="boton_restablecer_filtros">Restablecer filtros</button>
+    </aside>
+
+</main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/eb8debf0a8.js" crossorigin="anonymous"></script>
+</body>
+</html>
