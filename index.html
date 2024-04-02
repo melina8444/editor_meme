@@ -47,7 +47,7 @@
     <section>
         <div id="fondo_principal" class="fondo_principal">
             
-                <h2 id="h2_texto_superior">TOP TEXT</h2>
+                <h2 id="h2_texto_superior" class="h2_texto">TOP TEXT</h2>
             
                 
             <div id="imagen_div" class="imagen_div">
@@ -55,7 +55,7 @@
             </div>
             
            
-                <h2 id="h2_texto_inferior">BOTTOM TEXT</h2>
+                <h2 id="h2_texto_inferior" class="h2_texto">BOTTOM TEXT</h2>
             
             
         </div>
@@ -77,25 +77,39 @@
             <input id="sin_texto_inferior" type="checkbox">
             <label for="sin_texto_inferior">Sin texto inferior</label><br>
 
-            <label for="fuente">FUENTE</label><br>
+            <label for="fuente">FUENTE</label>
             <select id="tipo_fuente" name="tipo_fuente">
                 <option id="arial" value="arial">Arial</option>
                 <option id="arialblack" value="arialblack">Arial Black</option>
                 <option id="americantypewriter" value="americantypewriter">American Typewriter</option>
                 <option id="andalemono" value="andalemono">Andale Mono</option>
-                <option id="comicsansMs" value="comicsansMs">Comic Sans MS</option>
+                <option id="comicSans" value="comicSans">Comic Sans MS</option>
                 <option id="helvetica" value="helvetica">Helvetica</option>
                 <option id="impact" value="impact">Impact</option>
                 <option id="verdana" value="verdana">Verdana</option>
                 <option id="timesnewroman" value="timesnewroman">Times New Roman</option>
             </select>
-
-            <input id="tamanio_fuente" class="ancho" type="number" placeholder="40">
-
-            <button type="button" id="boton_alinear_izquierda"><i id="botonAlinearIzquierda" class="fa-solid fa-align-left"></i></button>
-            <button type="button" id="boton_alinear_centro"><i id="botonAlinearCentro" class="fa-solid fa-align-center"></i></button>
-            <button type="button" id="boton_alinear_derecha"><i id="botonAlinearDerecha" class="fa-solid fa-align-right"></i></button>
             
+            <li>
+            <label for="tamanio">Tamaño</label>
+            <input type="number" min="30" max="60" value="30" id="tamanio_fuente" class="ancho">
+        </li>
+
+        <li>
+            <div class="btns_alinear">
+                <button type="button" class="button-direction" aria-label=" Izquierda">
+                    <i class="fa-solid fa-align-left" id="btn_alinear_izquierda"></i>
+                </button>
+                <button type="button" class="button-direction" aria-label="Texto inferior" aria-label="Centro">
+                    <i class="fa-solid fa-align-center" id="btn_alinear_center"></i>
+                </button>
+                <button type="button" class="button-direction" aria-label="Derecha">
+                    <i class="fa-solid fa-align-right"  id="btn_alinear_derecha"></i>
+                </button>
+            </div>
+        </li>
+
+           
             <div class="contenedor_colores">
                 <div class="selector_color">
                     <h4>COLOR</h4>
@@ -108,15 +122,15 @@
             </div>
 
             <input id="fondo_transparente" type="checkbox">
-            <label for="fondo_transparente">Fondo transparente</label>
+            <label for="fondo_transparente">FONDO TRANSPARENTE</label>
 
             <h4>CONTORNO</h4>
-            <button type="button">Ninguno</button>
-            <button type="button">Claro</button>
-            <button type="button">Oscuro</button>
+            <button type="button" id="btn_sin_contorno">Ninguno</button>
+            <button type="button" id="btn_claro">Claro</button>
+            <button type="button" id="btn_oscuro">Oscuro</button>
 
             <h4>ESPACIADO</label>
-            <input id="espaciado" type="number" placeholder="35">
+                <input type="number" min="10" max="30" value="10" id="espaciado" aria-label="Espacio del texto">
 
             <H4>INTERLINEADO</H4>
             <select id="interliniado" name="interliniado">
@@ -136,7 +150,7 @@
             <label for="imagen_url_input">URL</label><br>
             <input type="url" id="imagen_url_input" name="imagen_url_input">
             <h4>FONDO</h4>
-            <input type="color" id="color_fondo_imagen">
+            <input type="color" id="color_fondo_imagen" placeholder="Ingrese url..." accept="image/png, .jpeg, .jpg">
             <select id="efecto_fondo_imagen" name="efecto_fondo_imagen">
                 <option id="ninguno" value="ninguno">Ninguno</option>
                 <option id="aclarar" value="aclarar">Aclarar</option>
@@ -146,37 +160,53 @@
                 <option id="multiplicar" value="multiplicar">Multiplicar</option>
             </select>
             <h4>FILTROS</h4>
-            <label for="brillo">Brillo</label><br>
-            <input class="margenes" type="range" id="brillo" min="0" max="100" step="1">
-            <br>
-            <label for="opacidad">Opacidad</label><br>
-            <input class="margenes" type="range" id="opacidad" min="0" max="100" step="1">
-            <br>
-            <label for="contraste">Contraste</label><br>
-            <input class="margenes" type="range" id="contraste" min="0" max="100" step="1">
-            <br>
-            <label for="desenfoque">Desenfoque</label><br>
-            <input class="margenes" type="range" id="desenfoque" min="0" max="100" step="1">
-            <br>
-            <label for="escala_de_grises">Escala De Grises</label><br>
-            <input class="margenes" type="range" id="escala_de_grises" min="0" max="100" step="1">
-            <br>
-            <label for="sepia">Sepia</label><br>
-            <input class="margenes" type="range" id="sepia" min="0" max="100" step="1">
-            <br>
-            <label for="hue">HUE</label><br>
-            <input class="margenes" type="range" id="hue" min="0" max="100" step="1">
-            <br>
-            <label for="saturado">Saturado</label><br>
-            <input class="margenes" type="range" id="saturado" min="0" max="100" step="1">
-            <br>
-            <label for="negativo">Negativo</label><br>
-            <input class="margenes" type="range" id="negativo" min="0" max="100" step="1">
+            <ul>
+                <li>
+                    <label for="brillo">Brillo</label>
+                    <input class="filtros" type="range" id="brillo" min="0" max="100" step="1">
+                </li>
+                <li>
+                    <label for="opacidad">Opacidad</label>
+                    <input class="filtros" type="range" id="opacidad" min="0" max="100" step="1">
+                </li>
+                <li>
+                    <label for="contraste">Contraste</label>
+                    <input class="filtros" type="range" id="contraste" min="0" max="100" step="1">
+                </li>
+                <li>
+                    <label for="desenfoque">Desenfoque</label>
+                    <input class="filtros" type="range" id="desenfoque" min="0" max="100" step="1">
+                </li>
+                <li>
+                    <label for="escala_de_grises">Escala Grises</label>
+                    <input class="filtros" type="range" id="escala_de_grises" min="0" max="100" step="1"></li>
+                <li>
+                    <label for="sepia">Sepia</label>
+                    <input class="filtros" type="range" id="sepia" min="0" max="100" step="1">
+                </li>
+                <li>
+                    <label for="hue">HUE</label>
+                    <input class="filtros" type="range" id="hue" min="0" max="100" step="1">
+                </li>
+                <li>
+                    <label for="saturado">Saturado</label>
+                    <input class="filtros" type="range" id="saturado" min="0" max="100" step="1">
+                </li>
+                <li>
+                    <label for="negativo">Negativo</label>
+                    <input class="filtros" type="range" id="negativo" min="0" max="100" step="1">
+                </li>
+                
+            </ul>
+           
         </form>
         <button id="boton_restablecer_filtros">Restablecer filtros</button>
     </aside>
 
 </main>
+<footer>
+    <p class="mi_footer">&copy; Melina Yangüez - <b>2024</b></p>
+</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/eb8debf0a8.js" crossorigin="anonymous"></script>

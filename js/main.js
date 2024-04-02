@@ -80,13 +80,122 @@ function sinTextoInf() {
 const imagen_div = document.getElementById("imagen_div");
 const imagen_url_input = document.getElementById("imagen_url_input");
 
-
 imagen_url_input.addEventListener("input", () => {
   imagen_div.style.backgroundImage = `url("${imagen_url_input.value}")`;
   imagen_div.style.backgroundSize = "cover";
   imagen_div.style.backgroundPosition = "center";
   imagen_div.style.backgroundRepeat = "no-repeat";
-  imagen_url_input.value = ""; 
+  imagen_url_input.value = "";
 });
 
-// FONDO
+// FUENTES
+const tipo_fuente = document.getElementById("tipo_fuente");
+
+tipo_fuente.addEventListener("change", () => {
+  if (tipo_fuente.value === "arial") {
+    h2_texto_superior.style.fontFamily = "Arial";
+    h2_texto_inferior.style.fontFamily = "Arial";
+  } else if (tipo_fuente.value === "arialblack") {
+    h2_texto_superior.style.fontFamily = "Arial black";
+    h2_texto_inferior.style.fontFamily = "Arial black";
+  } else if (tipo_fuente.value === "americantypewrite") {
+    h2_texto_superior.style.fontFamily = "American Typewriter";
+    h2_texto_inferior.style.fontFamily = "American Typewriter";
+  } else if (tipo_fuente.value === "andalemono") {
+    h2_texto_superior.style.fontFamily = "andalemono";
+    h2_texto_inferior.style.fontFamily = "andalemono";
+  } else if (tipo_fuente.value === "comicSans") {
+    h2_texto_superior.style.fontFamily = "Comic Sans MS";
+    h2_texto_inferior.style.fontFamily = "Comic Sans MS";
+  } else if (tipo_fuente.value === "helvetica") {
+    h2_texto_superior.style.fontFamily = "helvetica";
+    h2_texto_inferior.style.fontFamily = "helvetica";
+  } else if (tipo_fuente.value === "impact") {
+    h2_texto_superior.style.fontFamily = "impact";
+    h2_texto_inferior.style.fontFamily = "impact";
+  } else if (tipo_fuente.value === "verdana") {
+    h2_texto_superior.style.fontFamily = "verdana";
+    h2_texto_inferior.style.fontFamily = "verdana";
+  } else if (tipo_fuente.value === "timesnewroman") {
+    h2_texto_superior.style.fontFamily = "Times New Roman";
+    h2_texto_inferior.style.fontFamily = "Times New Roman";
+  }
+});
+
+// TAMAÑO FUENTES
+const tamanio_fuente = document.getElementById("tamanio_fuente");
+
+tamanio_fuente.addEventListener("change", () => {
+  h2_texto_superior.style.fontSize = `${tamanio_fuente.value}px`;
+  h2_texto_inferior.style.fontSize = `${tamanio_fuente.value}px`;
+});
+
+//   ALINEAR TEXTO
+// Izquierda
+const btn_alinear_izquierda = document.getElementById("btn_alinear_izquierda");
+const btn_alinear_derecha = document.getElementById("btn_alinear_derecha");
+const btn_alinear_center = document.getElementById("btn_alinear_center");
+
+btn_alinear_izquierda.addEventListener("click", () => {
+    console.log("tocaste btn izq")
+  h2_texto_superior.style.textAlign = "left";
+  h2_texto_inferior.style.textAlign = "left";
+});
+
+
+btn_alinear_derecha.addEventListener("click", () => {
+    console.log("tocaste btn der")
+  h2_texto_superior.style.textAlign = "right";
+  h2_texto_inferior.style.textAlign = "right";
+});
+
+
+btn_alinear_center.addEventListener("click", () => {
+    console.log("tocaste btn centro")
+  h2_texto_superior.style.textAlign = "center";
+  h2_texto_inferior.style.textAlign = "center";
+});
+
+
+// COLOR
+const colorTexto = document.getElementById("colorTexto");
+
+colorTexto.addEventListener("input", () => {
+  h2_texto_superior.style.color = colorTexto.value;
+  h2_texto_inferior.style.color = colorTexto.value;
+});
+
+//  FONDO
+
+const color_fondo_texto = document.getElementById("color_fondo_texto");
+
+color_fondo_texto.addEventListener("input", () => {
+  h2_texto_superior.style.backgroundColor = color_fondo_texto.value;
+  h2_texto_inferior.style.backgroundColor = color_fondo_texto.value;
+});
+
+// FONDO TRANPARENTE
+
+const fondo_transparente = document.getElementById("fondo_transparente");
+const fondo_principal = document.getElementById("fondo_principal");
+fondo_transparente.addEventListener("input", () => {
+  if (fondo_transparente.checked) {
+    console.log("entro al if");
+    fondo_principal.style.backgroundColor = "transparent";
+    h2_texto_superior.style.backgroundColor = "transparent";
+    h2_texto_inferior.style.backgroundColor = "transparent";
+  } else {
+    console.log("entro al 2 if");
+
+    fondo_principal.style.backgroundColor = "white";
+    h2_texto_superior.style.backgroundColor = fondo_principal;
+    h2_texto_inferior.style.backgroundColor = fondo_principal;
+  }
+});
+
+// CONTORNO
+const btn_sin_contorno = document.getElementById("btn_sin_contorno");
+btn_sin_contorno.addEventListener("click", () => {
+  h2_texto_superior.style.textShadow = "0 0 transparent";
+  h2_texto_inferior.style.textShadow = "0 0 transparent";
+});
