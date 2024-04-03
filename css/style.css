@@ -9,7 +9,7 @@
   --colorAside: #edbf97;
   --colorSectionMeme: #e3e3e3;
   --colorTopText: #f3f0f4;
-  --colorAsideButton: #b1a0c7;
+  --colorAsideButton: #9f61f0;
   --colorButtonHover: #c51475;
   --mainColorFont: #4614de;
   --secondColorFont: #4614de;
@@ -61,6 +61,7 @@ ul button {
 }
 ul button:hover {
   background-color: #75777e89;
+  cursor: pointer;
 }
 
 /* Main */
@@ -107,6 +108,11 @@ section {
   padding: 10px;
   margin-top: 10px;
   font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn_dow_imagen:hover{
+  background-color: #75777e89;
 }
 main button i {
   padding: 5px;
@@ -116,6 +122,7 @@ aside {
   top: 0;
   right: 0;
   width: 23%;
+  
 }
 
 .lateral {
@@ -162,10 +169,30 @@ aside button {
   box-shadow: #0e032f 3px 3px;
 }
 
+.button-direction{
+  cursor: pointer;
+}
+
 .alinear_btn{
   cursor: pointer;
 }
+
+.btn_restablecer_filtros{
+  cursor: pointer;
+  padding: 7px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.btn_restablecer_filtros:hover{
+  background-color: #3d3f43c1;
+}
+
 .mi_footer {
   text-align: center;
   font-size: 20px;
+}
+
+.aside_imagen{
+  display: none;
 }

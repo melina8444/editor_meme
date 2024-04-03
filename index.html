@@ -33,7 +33,7 @@
 <body>
 
 <header id="mi_header">
-    <h1>Generador de Memes&#x270D;<span class="autor">Melina Yangüez &#x1F498;</span></h1>
+    <h1>Generador de Memes&#x270D;<span class="autor" id="autor">Melina Yangüez &#x1F498;</span></h1>
     <nav>
         <ul>
             <li ><button id="boton_imagen"><i class="fa-regular fa-file-image"></i>Imágen</button></li>
@@ -62,7 +62,8 @@
         <button id="btn_download" class="btn_dow_imagen"><i class="fa-solid fa-download"></i>Descargar Meme</button>
     </section>
 
-    <aside class="lateral" id="aside_texto">
+    
+    <aside class="lateral aside_texto" id="aside_texto">
         <h3>TEXTO</h3>
         <form action="#">
             <label for="texto_superior_input">SUPERIOR</label><br>
@@ -144,7 +145,7 @@
         </form>
     </aside>
 
-    <aside class="lateral" id="aside_imagen">
+    <aside class="lateral aside_imagen" id="aside_imagen">
         <h3>IMÁGEN</h3>
         <form action="#">
             <label for="imagen_url_input">URL</label><br>
@@ -200,7 +201,7 @@
             </ul>
            
         </form>
-        <button id="boton_restablecer_filtros">Restablecer filtros</button>
+        <button id="btn_restablecer_filtros" class="btn_restablecer_filtros">Restablecer filtros</button>
     </aside>
 
 </main>

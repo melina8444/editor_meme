@@ -4,6 +4,7 @@ const boton_modo = document.getElementById("boton_modo");
 const header = document.getElementById("mi_header");
 let aside_texto = document.getElementById("aside_texto");
 let aside_imagen = document.getElementById("aside_imagen");
+const autor = document.getElementById("autor")
 const h2_texto_superior = document.getElementById("h2_texto_superior");
 const h2_texto_inferior = document.getElementById("h2_texto_inferior");
 const texto_superior_input = document.getElementById("texto_superior_input");
@@ -24,7 +25,7 @@ let cambioModo = "Modo claro";
 boton_modo.addEventListener("click", () => {
   if (cambioModo === "Modo oscuro") {
     document.body.style.backgroundColor = "#fff";
-    document.body.style.color = "white";
+    document.body.style.color = "black";
     header.style.backgroundColor = "#7b6d99";
     h2_texto_superior.style.color = "black";
     h2_texto_superior.style.color = "black";
@@ -35,9 +36,13 @@ boton_modo.addEventListener("click", () => {
   } else if (cambioModo === "Modo claro") {
     document.body.style.backgroundColor = "#75777e89";
     document.body.style.color = "#fff";
-    header.style.backgroundColor = "#7b6d99";
+    header.style.backgroundColor = "#4614de";
     aside_texto.style.backgroundColor = "rgb(40, 41, 53)";
     aside_imagen.style.backgroundColor = "rgb(40, 41, 53)";
+    h2_texto_superior.style.color = "black";
+    h2_texto_superior.style.color = "black";
+    autor.style.color = "white";
+
     boton_modo.textContent = cambioModo;
     cambioModo = "Modo oscuro";
   }
@@ -137,23 +142,23 @@ const btn_alinear_derecha = document.getElementById("btn_alinear_derecha");
 const btn_alinear_center = document.getElementById("btn_alinear_center");
 
 btn_alinear_izquierda.addEventListener("click", () => {
-    console.log("tocaste btn izq")
-  h2_texto_superior.style.textAlign = "left";
-  h2_texto_inferior.style.textAlign = "left";
+    
+  h2_texto_superior.style.alignItems = "start";
+  h2_texto_inferior.style.alignItems = "start";
 });
 
 
 btn_alinear_derecha.addEventListener("click", () => {
-    console.log("tocaste btn der")
-  h2_texto_superior.style.textAlign = "right";
-  h2_texto_inferior.style.textAlign = "right";
+    
+  h2_texto_superior.style.alignItems = "end";
+  h2_texto_inferior.style.alignItems = "end";
 });
 
 
 btn_alinear_center.addEventListener("click", () => {
-    console.log("tocaste btn centro")
-  h2_texto_superior.style.textAlign = "center";
-  h2_texto_inferior.style.textAlign = "center";
+    
+  h2_texto_superior.style.alignItems = "center";
+  h2_texto_inferior.style.alignItems = "center";
 });
 
 
@@ -199,3 +204,98 @@ btn_sin_contorno.addEventListener("click", () => {
   h2_texto_superior.style.textShadow = "0 0 transparent";
   h2_texto_inferior.style.textShadow = "0 0 transparent";
 });
+
+
+
+// COLOR FONDO IMAGEN
+const color_fondo_imagen = document.getElementById("color_fondo_imagen");
+
+color_fondo_imagen.addEventListener("click", ()=>{
+    imagen_div.style.backgroundColor = color_fondo_imagen.value;
+})
+
+// EFECTO FONDO IMAGEN
+const efecto_fondo_imagen = document.getElementById("efecto_fondo_imagen");
+
+efecto_fondo_imagen.addEventListener("click", ()=>{
+    if(efecto_fondo_imagen.value === 'ninguno'){
+        imagen_div.style.backgroundBlendMode ='normal'
+    }
+    if(efecto_fondo_imagen.value === 'aclarar'){
+        imagen_div.style.backgroundBlendMode ='lighten'
+    }
+    if(efecto_fondo_imagen.value === 'oscurecer'){
+        imagen_div.style.backgroundBlendMode ='darken'
+    }
+    if(efecto_fondo_imagen.value === 'diferencia'){
+        imagen_div.style.backgroundBlendMode ='difference'
+    }
+    if(efecto_fondo_imagen.value === 'iluminosidad'){
+        imagen_div.style.backgroundBlendMode ='luminosity'
+    }
+    if(efecto_fondo_imagen.value === 'multiplicar'){
+        imagen_div.style.backgroundBlendMode ='multiply'
+    }
+})
+
+/*Efectos de filtros de la imágen*/
+brillo.addEventListener('change', modificarFiltros);
+opacidad.addEventListener('change', modificarFiltros);
+contraste.addEventListener('change', modificarFiltros);
+desenfoque.addEventListener('change', modificarFiltros);
+escala_de_grises.addEventListener('change', modificarFiltros);
+sepia.addEventListener('change', modificarFiltros);
+hue.addEventListener('change', modificarFiltros);
+saturado.addEventListener('change', modificarFiltros);
+negativo.addEventListener('change', modificarFiltros);
+
+function modificarFiltros(){
+    let filtro ='';
+
+    if (brillo.value !== '1'){
+        filtro += `brightness(${brillo.value}) `;
+}
+    if (opacidad.value !== '1'){
+        filtro += `opacity(${opacidad.value}) `;
+}
+    if (contraste.value !== '100'){
+        filtro += `contrast(${contraste.value}%) `;
+}
+    if (desenfoque.value !== '0'){
+        filtro += `blur(${desenfoque.value}px) `;
+}
+    if (escala_de_grises.value !== '0'){
+        filtro += `grayscale(${escala_de_grises.value}%) `;
+}
+    if (sepia.value !== '0'){
+        filtro += `sepia(${sepia.value}%) `;
+}
+    if (hue.value !== '0'){
+        filtro += `hue-rotate(${hue.value}deg) `;
+}
+    if (saturado.value !== '100'){
+        filtro += `saturate(${saturado.value}%) `;
+}
+    if (negativo.value !== '0'){
+        filtro += `invert(${negativo.value})`;
+}
+    imagen_div.style.filter = filtro.trim();
+};
+
+// REESTABLECER FILTROS
+const btn_restablecer_filtros = document.getElementById("btn_restablecer_filtros")
+
+btn_restablecer_filtros.addEventListener('click', ()=> {
+
+    brillo.value = '1';
+    opacidad.value = '1';
+    contraste.value = '100';
+    desenfoque.value = '0';
+    escala_de_grises.value = '0';
+    sepia.value = '0';
+    hue.value = '0';
+    saturado.value = '100';
+    negativo.value = '0';
+    modificarFiltros();
+});
+
