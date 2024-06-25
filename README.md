@@ -25,21 +25,7 @@ Este proyecto es un sencillo editor de memes creado utilizando HTML, CSS y JavaS
     ```
 3. Abre el archivo `index.html` en tu navegador web preferido.
 
-## Estructura del Proyecto
-editor-de-memes/
-│
-├── css/
-│ └── styles.css # Estilos CSS para el editor de memes
-│
-├── js/
-│ └── script.js # Lógica JavaScript para la funcionalidad del editor
-│
-├── images/
-│ └── ... # (Opcional) Carpeta para imágenes de muestra o recursos
-│
-├── index.html # Página principal del editor de memes
-├── README.md # Este archivo
-└── ...
+
 
 ## Tecnologías Utilizadas
 
