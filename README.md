@@ -11,7 +11,7 @@ Este proyecto es un sencillo editor de memes creado utilizando HTML, CSS y JavaS
 
 ## Capturas de Pantalla
 
-![Captura de pantalla](ruta/a/tu/captura.png)
+![Captura de pantalla](../editor_meme/img/captura.png)
 
 ## Uso
 
