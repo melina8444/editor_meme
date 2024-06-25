@@ -21,7 +21,7 @@ Este proyecto es un sencillo editor de memes creado utilizando HTML, CSS y JavaS
     ```
 2. Navega a la carpeta del proyecto.
     ```bash
-    cd editor-de-memes
+    cd editor_meme
     ```
 3. Abre el archivo `index.html` en tu navegador web preferido.
 
