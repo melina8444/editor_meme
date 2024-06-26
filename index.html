@@ -32,8 +32,8 @@
 
 <body>
 
-<header id="mi_header">
-    <h1>Generador de Memes&#x270D;<span class="autor" id="autor">Melina Yangüez &#x1F498;</span></h1>
+<header id="mi_header" class="mi_header">
+    <h1 class="titulo_pcipal">Generador de Memes&#x270D;<span class="autor" id="autor">Melina Yangüez &#x1F498;</span></h1>
     <nav>
         <ul>
             <li ><button id="boton_imagen"><i class="fa-regular fa-file-image"></i>Imágen</button></li>
@@ -44,13 +44,15 @@
 </header>
 
 <main>
-    <section>
+    <section class="seccion1">
         <div id="fondo_principal" class="fondo_principal">
             
                 <h2 id="h2_texto_superior" class="h2_texto">TOP TEXT</h2>
             
                 
             <div id="imagen_div" class="imagen_div">
+
+                <img id="imagen" src="" >
 
             </div>
             
@@ -59,11 +61,11 @@
             
             
         </div>
-        <button id="btn_download" class="btn_dow_imagen"><i class="fa-solid fa-download"></i>Descargar Meme</button>
+        <button id="btn_download" class="btn_download"><i class="fa-solid fa-download"></i>Descargar Meme</button>
     </section>
 
     
-    <aside class="lateral aside_texto" id="aside_texto">
+    <aside class="aside_texto" id="aside_texto">
         <h3>TEXTO</h3>
         <form action="#">
             <label for="texto_superior_input">SUPERIOR</label><br>
@@ -145,7 +147,7 @@
         </form>
     </aside>
 
-    <aside class="lateral aside_imagen" id="aside_imagen">
+    <aside class="aside_imagen" id="aside_imagen">
         <h3>IMÁGEN</h3>
         <form action="#">
             <label for="imagen_url_input">URL</label><br>

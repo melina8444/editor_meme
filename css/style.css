@@ -18,15 +18,17 @@
   --borderRadius: 15px;
 }
 
-header {
+
+.mi_header {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--colorHeader);
   width: 85%;
-  padding: 20px;
+  padding: 5px;
+  
 }
-h1 {
+.titulo_pcipal {
   font-family: var(--mainFont);
   font-size: 3rem;
   font-weight: bold;
@@ -65,17 +67,19 @@ ul button:hover {
 }
 
 /* Main */
-section {
+.seccion1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-  margin: 40px 0;
+  width: auto;
+  margin: 20px;
 }
 
 .fondo_principal {
-  width: 35%;
-  margin-bottom: 20px;
+  width: 55%;
+  margin-bottom:10px;
+  height: 100%;
+  
 }
 
 .fondo_principal h2 {
@@ -98,9 +102,10 @@ section {
 .imagen_div {
   height: 400px;
   background-color: black;
+  width: 100%;
 }
 
-.btn_dow_imagen {
+.btn_download {
   background-color: var(--colorButtonHover);
   color: var(--colorTopText);
   border: 2px solid var(--secondColorFont);
@@ -117,20 +122,25 @@ section {
 main button i {
   padding: 5px;
 }
+
+
 aside {
   position: absolute;
   top: 0;
   right: 0;
-  width: 23%;
-  
-}
-
-.lateral {
+  width: auto;
+ 
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  justify-content:flex-start;
+  height: auto;
   background-color: #abacae;
+  padding: 15px 10px;
+  overflow: auto;
+ 
 }
+
+
 input,
 select {
   margin: 10px 0;

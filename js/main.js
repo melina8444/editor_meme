@@ -87,11 +87,24 @@ const imagen_url_input = document.getElementById("imagen_url_input");
 
 imagen_url_input.addEventListener("input", () => {
   imagen_div.style.backgroundImage = `url("${imagen_url_input.value}")`;
-  imagen_div.style.backgroundSize = "cover";
+  imagen_div.style.backgroundSize = "containt";
   imagen_div.style.backgroundPosition = "center";
   imagen_div.style.backgroundRepeat = "no-repeat";
   imagen_url_input.value = "";
 });
+
+// BOTON DESCARGAR IMAGEN
+const btn_download = document.getElementById('btn_download');
+
+btn_download.addEventListener('click', function(){
+   const imagenUrl = imagen_div.style.backgroundImage.slice(5, -2); 
+   const link = document.createElement('a');
+   link.href = imagenUrl;
+   link.download = 'imagen.png'; 
+   link.click(); 
+   
+});
+
 
 // FUENTES
 const tipo_fuente = document.getElementById("tipo_fuente");
@@ -136,6 +149,7 @@ tamanio_fuente.addEventListener("change", () => {
 });
 
 //   ALINEAR TEXTO
+
 // Izquierda
 const btn_alinear_izquierda = document.getElementById("btn_alinear_izquierda");
 const btn_alinear_derecha = document.getElementById("btn_alinear_derecha");
@@ -147,14 +161,14 @@ btn_alinear_izquierda.addEventListener("click", () => {
   h2_texto_inferior.style.alignItems = "start";
 });
 
-
+// Derecha
 btn_alinear_derecha.addEventListener("click", () => {
     
   h2_texto_superior.style.alignItems = "end";
   h2_texto_inferior.style.alignItems = "end";
 });
 
-
+// Centrado
 btn_alinear_center.addEventListener("click", () => {
     
   h2_texto_superior.style.alignItems = "center";
@@ -298,4 +312,5 @@ btn_restablecer_filtros.addEventListener('click', ()=> {
     negativo.value = '0';
     modificarFiltros();
 });
+
 
