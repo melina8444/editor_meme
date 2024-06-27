@@ -96,14 +96,15 @@ imagen_url_input.addEventListener("input", () => {
 // BOTON DESCARGAR IMAGEN
 const btn_download = document.getElementById('btn_download');
 
-btn_download.addEventListener('click', function(){
-   const imagenUrl = imagen_div.style.backgroundImage.slice(5, -2); 
-   const link = document.createElement('a');
-   link.href = imagenUrl;
-   link.download = 'imagen.png'; 
-   link.click(); 
-   
-});
+function descargarImagen () {
+  console.log(fondo_principal)
+  domtoimage.toBlob(fondo_principal).then(function (blob) {
+    saveAs(blob, 'meme.png')
+  })
+}
+
+btn_download.addEventListener('click', descargarImagen);
+
 
 
 // FUENTES

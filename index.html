@@ -19,13 +19,28 @@
         <meta property="twitter:description" content="Puedes editar tus memes y descargar tus creaciones con esta aplicación.">
         <meta property="twitter:image" content="">
         <!--Links-->
+ <!-- file saver -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+ integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+ crossorigin="anonymous"></script>
+
+        <!-- dom to image -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"></script>
+
+
+
         <link rel="favicon icon" href="./images/favicon.ico" type="image/x-icon">
         <!-- para colocar iconos -->
         <script src="https://kit.fontawesome.com/55eea74df4.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100&family=Open+Sans+Condensed:wght@300&family=Potta+One&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Hachi+Maru+Pop&family=Hanalei&family=Londrina+Solid:wght@100&family=Pacifico&family=Permanent+Marker&family=Potta+One&family=Shadows+Into+Light&family=Yusei+Magic&display=swap" rel="stylesheet">  
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Hachi+Maru+Pop&family=Hanalei&family=Londrina+Solid:wght@100&family=Pacifico&family=Permanent+Marker&family=Potta+One&family=Shadows+Into+Light&family=Yusei+Magic&display=swap" rel="stylesheet">   -->
         <link rel="stylesheet" href="./css/style.css">
+
+
+   
         
         <title>Editor de memes</title>
     </head>
@@ -52,7 +67,7 @@
                 
             <div id="imagen_div" class="imagen_div">
 
-                <img id="imagen" src="" >
+                <img id="imagen" src="" alt="" class="imagen">
 
             </div>
             
@@ -151,7 +166,7 @@
         <h3>IMÁGEN</h3>
         <form action="#">
             <label for="imagen_url_input">URL</label><br>
-            <input type="url" id="imagen_url_input" name="imagen_url_input">
+            <input type="text" id="imagen_url_input" name="imagen_url_input">
             <h4>FONDO</h4>
             <input type="color" id="color_fondo_imagen" placeholder="Ingrese url..." accept="image/png, .jpeg, .jpg">
             <select id="efecto_fondo_imagen" name="efecto_fondo_imagen">
