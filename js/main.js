@@ -87,7 +87,7 @@ const imagen_url_input = document.getElementById("imagen_url_input");
 
 imagen_url_input.addEventListener("input", () => {
   imagen_div.style.backgroundImage = `url("${imagen_url_input.value}")`;
-  imagen_div.style.backgroundSize = "containt";
+  imagen_div.style.backgroundSize = "cover";
   imagen_div.style.backgroundPosition = "center";
   imagen_div.style.backgroundRepeat = "no-repeat";
   imagen_url_input.value = "";
@@ -97,10 +97,10 @@ imagen_url_input.addEventListener("input", () => {
 const btn_download = document.getElementById('btn_download');
 
 function descargarImagen () {
-  console.log(fondo_principal)
-  domtoimage.toBlob(fondo_principal).then(function (blob) {
-    saveAs(blob, 'meme.png')
-  })
+  domtoimage.toBlob(document.getElementById('contenedor_principal'))
+      .then(function (blob) {
+          window.saveAs(blob, 'meme.png');
+      });
 }
 
 btn_download.addEventListener('click', descargarImagen);
@@ -157,23 +157,20 @@ const btn_alinear_derecha = document.getElementById("btn_alinear_derecha");
 const btn_alinear_center = document.getElementById("btn_alinear_center");
 
 btn_alinear_izquierda.addEventListener("click", () => {
-    
-  h2_texto_superior.style.alignItems = "start";
-  h2_texto_inferior.style.alignItems = "start";
+  h2_texto_superior.style.textAlign = 'left';
+  h2_texto_inferior.style.textAlign = 'left';
 });
 
 // Derecha
 btn_alinear_derecha.addEventListener("click", () => {
-    
-  h2_texto_superior.style.alignItems = "end";
-  h2_texto_inferior.style.alignItems = "end";
+  h2_texto_superior.style.textAlign = 'right';
+  h2_texto_inferior.style.textAlign = 'right';
 });
 
 // Centrado
 btn_alinear_center.addEventListener("click", () => {
-    
-  h2_texto_superior.style.alignItems = "center";
-  h2_texto_inferior.style.alignItems = "center";
+  h2_texto_superior.style.textAlign = 'center';
+  h2_texto_inferior.style.textAlign = 'center';
 });
 
 
@@ -197,19 +194,19 @@ color_fondo_texto.addEventListener("input", () => {
 // FONDO TRANPARENTE
 
 const fondo_transparente = document.getElementById("fondo_transparente");
-const fondo_principal = document.getElementById("fondo_principal");
+let contenedor_principal = document.getElementById("contenedor_principal");
 fondo_transparente.addEventListener("input", () => {
   if (fondo_transparente.checked) {
     console.log("entro al if");
-    fondo_principal.style.backgroundColor = "transparent";
+    contenedor_principal.style.backgroundColor = "transparent";
     h2_texto_superior.style.backgroundColor = "transparent";
     h2_texto_inferior.style.backgroundColor = "transparent";
   } else {
     console.log("entro al 2 if");
 
-    fondo_principal.style.backgroundColor = "white";
-    h2_texto_superior.style.backgroundColor = fondo_principal;
-    h2_texto_inferior.style.backgroundColor = fondo_principal;
+    contenedor_principal.style.backgroundColor = "white";
+    h2_texto_superior.style.backgroundColor = contenedor_principal;
+    h2_texto_inferior.style.backgroundColor = contenedor_principal;
   }
 });
 
