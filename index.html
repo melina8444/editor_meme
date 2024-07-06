@@ -38,6 +38,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <!-- <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Hachi+Maru+Pop&family=Hanalei&family=Londrina+Solid:wght@100&family=Pacifico&family=Permanent+Marker&family=Potta+One&family=Shadows+Into+Light&family=Yusei+Magic&display=swap" rel="stylesheet">   -->
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/mobile.css">
 
 
    
@@ -58,8 +59,8 @@
     </nav>
 </header>
 
-<main>
-    <div class="container">
+<main id="id_main">
+    <div class="container" id="container">
         <div id="contenedor_principal" class="contenedor_principal">
             
                 <h2 id="h2_texto_superior" class="h2_texto_superior">TOP TEXT</h2>
@@ -79,8 +80,10 @@
         <button id="btn_download" class="btn_download"><i class="fa-solid fa-download"></i>Descargar Meme</button>
     </div>
 
-    
+    <button class="boton_abrir" id="boton_abrir"><i class="fas fa-bars"></i></button>
+    <button class="boton_cerrar hidden" id="boton_cerrar"><i class="fas fa-times"></i></button>
     <aside class="aside_texto" id="aside_texto">
+        
         <h3>TEXTO</h3>
         <form action="#">
             <label for="texto_superior_input">SUPERIOR</label><br>

@@ -311,4 +311,32 @@ btn_restablecer_filtros.addEventListener('click', ()=> {
     modificarFiltros();
 });
 
+// // BOTON CERRAR ABIR DE LOS ASIDE
+const boton_cerrar = document.getElementById('boton_cerrar');
+const boton_abrir = document.getElementById('boton_abrir');
+const container = document.getElementById('container');
+const id_main = document.getElementById('id_main');
 
+
+function mostrarAside() {
+  console.log('abrir');
+  aside_imagen.style.display = 'block';
+  aside_texto.style.display = 'block';
+  boton_abrir.style.display = 'none';
+  boton_cerrar.style.display = 'inline-block';
+  // container.style.display = 'none';
+  // id_main.style.display = 'none';
+}
+
+function cerrarAside() {
+  console.log('cerrar');
+  aside_imagen.style.display = 'none';
+  aside_texto.style.display = 'none';
+  boton_abrir.style.display = 'inline-block';
+  boton_cerrar.style.display = 'none';
+  // container.style.display = 'block';
+  // id_main.style.display = 'block';
+}
+
+boton_abrir.addEventListener('click', mostrarAside);
+boton_cerrar.addEventListener('click', cerrarAside);
