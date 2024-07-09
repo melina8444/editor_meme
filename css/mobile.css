@@ -6,7 +6,7 @@
         width: 100%;
         
     }
-    aside{
+    .seccion_aside{
         display: none;
     }
     .boton_cerrar {
@@ -24,4 +24,48 @@
         cursor: pointer;
         transition: right 0.5s;
       }
+
+      
+
+/* 
+  .seccion_aside{
+    margin-top: 19%;
+    background-color: blue;
+  }
+   */
+
+  
+.boton_cerrar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    color: white;
+    outline: 0;
+    text-decoration: none;
+    border: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: right 0.5s;
+  }
+  
+  .boton_abrir {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+    color: rgb(234, 61, 61);
+    outline: 0;
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 65px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: right 0.5s;
+  }
+  
+  
   }
