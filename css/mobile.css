@@ -29,6 +29,11 @@
        .aside_imagen, .aside_texto {
         
     width: 100vw; /* Ancho completo en dispositivos móviles */
+    width: 300px; /* Ancho fijo para dispositivos de pantalla más amplia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Para centrar texto */
   }
 
 /* 
