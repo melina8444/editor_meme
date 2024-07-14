@@ -6,10 +6,11 @@
         width: 100%;
         
     }
-    .seccion_aside{
-        display: none;
+    .seccion_aside {
+      width: 100%; /* Ancho completo en dispositivos móviles */
+      display: none;
     }
-    .boton_cerrar {
+    /* .boton_cerrar {
         display: flex;
         justify-content: flex-end;
         background-color: transparent;
@@ -23,9 +24,12 @@
         border-radius: 3px;
         cursor: pointer;
         transition: right 0.5s;
-      }
+      } */
 
-      
+       .aside_imagen, .aside_texto {
+        
+    width: 100vw; /* Ancho completo en dispositivos móviles */
+  }
 
 /* 
   .seccion_aside{

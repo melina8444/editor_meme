@@ -138,21 +138,19 @@ main button i {
 }
 
 
-
 .seccion_aside {
   position: absolute;
   top: 0;
   right: 0;
-  width: auto;
- 
+  width: 300px; /* Ancho fijo para dispositivos de pantalla más amplia */
+  font-size: small;
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   height: 100%;
   background-color: #abacae;
-  padding: 15px 10px;
+  padding: 10px 15px;
   overflow: auto;
- 
 }
 
 

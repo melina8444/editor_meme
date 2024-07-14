@@ -9,16 +9,40 @@ const h2_texto_superior = document.getElementById("h2_texto_superior");
 const h2_texto_inferior = document.getElementById("h2_texto_inferior");
 const texto_superior_input = document.getElementById("texto_superior_input");
 const texto_inferior_input = document.getElementById("texto_inferior_input");
+const seccion_aside = document.getElementById('seccion_aside');
 
 // BOTONES
 boton_imagen.addEventListener("click", () => {
   aside_texto.style.display = "none";
   aside_imagen.style.display = "block";
+  if (window.innerWidth <= 600) {
+    seccion_aside.style.display = "block";
+    aside_imagen.style.width = "100vw"; // Establecer ancho completo en dispositivos móviles
+    seccion_aside.style.height = "90vh";
+    seccion_aside.style.marginTop = "24vh";
+  } else {
+    seccion_aside.style.display = "none";
+    aside_imagen.style.width = ""; // Restaurar el ancho predeterminado en otros dispositivos
+    aside_imagen.style.height = "";
+    seccion_aside.style.marginTop = "";
+  }
 });
 
 boton_texto.addEventListener("click", () => {
-  aside_texto.style.display = "block";
   aside_imagen.style.display = "none";
+  aside_texto.style.display = "block";
+  if (window.innerWidth <= 600) {
+    console.log('click')
+    seccion_aside.style.display = "block";
+    aside_texto.style.width = "100vw"; // Establecer ancho completo en dispositivos móviles
+    seccion_aside.style.height = "80vh";
+    seccion_aside.style.marginTop = "24vh";
+  } else {
+    seccion_aside.style.display = "none";
+    aside_texto.style.width = ""; // Restaurar el ancho predeterminado en otros dispositivos
+    aside_texto.style.height = "";
+    seccion_aside.style.marginTop = "";
+  }
 });
 
 let cambioModo = "Modo claro";
@@ -316,7 +340,7 @@ const botonCerrar = document.getElementById('boton_cerrar');
 const botonAbrir = document.getElementById('boton_abrir');
 const container = document.getElementById('container');
 const id_main = document.getElementById('id_main');
-const seccion_aside = document.getElementById('seccion_aside')
+
 
 
 
