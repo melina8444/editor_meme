@@ -12,10 +12,14 @@ const texto_inferior_input = document.getElementById("texto_inferior_input");
 const seccion_aside = document.getElementById('seccion_aside');
 
 // BOTONES
+let textoVisible = false;
+let imagenVisible = false;
+
 boton_imagen.addEventListener("click", () => {
   aside_texto.style.display = "none";
   aside_imagen.style.display = "block";
-  if (window.innerWidth <= 600) {
+  // if (window.innerWidth <= 600 && imagenVisible === true) {
+    if (window.innerWidth <= 600 ) {
     seccion_aside.style.display = "block";
     aside_imagen.style.width = "100vw"; 
     seccion_aside.style.height = "90vh";
@@ -31,7 +35,8 @@ boton_imagen.addEventListener("click", () => {
 boton_texto.addEventListener("click", () => {
   aside_imagen.style.display = "none";
   aside_texto.style.display = "block";
-  if (window.innerWidth <= 600) {
+  // if (window.innerWidth <= 600 && textoVisible === true) {
+    if (window.innerWidth <= 600 ) {
     console.log('click')
     seccion_aside.style.display = "block";
     aside_texto.style.width = "100vw";
