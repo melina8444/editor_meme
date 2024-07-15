@@ -17,12 +17,12 @@ boton_imagen.addEventListener("click", () => {
   aside_imagen.style.display = "block";
   if (window.innerWidth <= 600) {
     seccion_aside.style.display = "block";
-    aside_imagen.style.width = "100vw"; // Establecer ancho completo en dispositivos móviles
+    aside_imagen.style.width = "100vw"; 
     seccion_aside.style.height = "90vh";
     seccion_aside.style.marginTop = "24vh";
   } else {
-    seccion_aside.style.display = "none";
-    aside_imagen.style.width = ""; // Restaurar el ancho predeterminado en otros dispositivos
+    seccion_aside.style.display = "block";
+    aside_imagen.style.width = ""; 
     aside_imagen.style.height = "";
     seccion_aside.style.marginTop = "";
   }
@@ -34,15 +34,16 @@ boton_texto.addEventListener("click", () => {
   if (window.innerWidth <= 600) {
     console.log('click')
     seccion_aside.style.display = "block";
-    aside_texto.style.width = "100vw"; // Establecer ancho completo en dispositivos móviles
+    aside_texto.style.width = "100vw";
     seccion_aside.style.height = "80vh";
     seccion_aside.style.marginTop = "24vh";
   } else {
-    seccion_aside.style.display = "none";
-    aside_texto.style.width = ""; // Restaurar el ancho predeterminado en otros dispositivos
+    seccion_aside.style.display = "block";
+    aside_texto.style.width = ""; 
     aside_texto.style.height = "";
     seccion_aside.style.marginTop = "";
   }
+  
 });
 
 let cambioModo = "Modo claro";
@@ -367,17 +368,17 @@ const id_main = document.getElementById('id_main');
 //  botonCerrar.addEventListener('click', cerrarAside);
 
 
-  botonAbrir.addEventListener('click', () => {
-    seccion_aside.classList.remove('hidden');
-    botonAbrir.classList.add('hidden');
-    botonCerrar.classList.remove('hidden');
-});
+//   botonAbrir.addEventListener('click', () => {
+//     seccion_aside.classList.remove('hidden');
+//     botonAbrir.classList.add('hidden');
+//     botonCerrar.classList.remove('hidden');
+// });
 
-botonCerrar.addEventListener('click', () => {
-  seccion_aside.classList.add('hidden');
-    botonAbrir.classList.remove('hidden');
-    botonCerrar.classList.add('hidden');
-});
+// botonCerrar.addEventListener('click', () => {
+//   seccion_aside.classList.add('hidden');
+//     botonAbrir.classList.remove('hidden');
+//     botonCerrar.classList.add('hidden');
+// });
 
 
 
