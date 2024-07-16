@@ -100,7 +100,7 @@ main {
   align-items: center;
   background-color: #e9e7ef;
   padding: 20px;           
-  box-sizing: border-box;  
+   
 }
 
 .h2_texto_superior, .h2_texto_inferior {
@@ -146,11 +146,11 @@ main button i {
   font-size: small;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
+  justify-content:space-between;
+  /* height: 100%; */
   background-color: #abacae;
   padding: 10px 15px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 
@@ -219,12 +219,10 @@ aside button {
 
 .aside_imagen .aside_texto{
   display: none;
-  height: 100vh;
+  height: 100%;
 
 }
-/* .hidden{
-  display: none;
-} */
+
 
 @media only screen and (max-width: 600px) {
   body {
