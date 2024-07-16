@@ -9,16 +9,46 @@ const h2_texto_superior = document.getElementById("h2_texto_superior");
 const h2_texto_inferior = document.getElementById("h2_texto_inferior");
 const texto_superior_input = document.getElementById("texto_superior_input");
 const texto_inferior_input = document.getElementById("texto_inferior_input");
+const seccion_aside = document.getElementById('seccion_aside');
 
 // BOTONES
+let textoVisible = false;
+let imagenVisible = false;
+
 boton_imagen.addEventListener("click", () => {
   aside_texto.style.display = "none";
   aside_imagen.style.display = "block";
+  // if (window.innerWidth <= 600 && imagenVisible === true) {
+    if (window.innerWidth < 600 ) {
+    seccion_aside.style.display = "block";
+    aside_imagen.style.width = "100vw"; 
+    seccion_aside.style.height = "90vh";
+    seccion_aside.style.marginTop = "24vh";
+  } else {
+    seccion_aside.style.display = "block";
+    aside_imagen.style.width = ""; 
+    aside_imagen.style.height = "";
+    seccion_aside.style.marginTop = "0";
+  }
 });
 
 boton_texto.addEventListener("click", () => {
-  aside_texto.style.display = "block";
   aside_imagen.style.display = "none";
+  aside_texto.style.display = "block";
+  // if (window.innerWidth <= 600 && textoVisible === true) {
+    if (window.innerWidth < 600 ) {
+    console.log('click')
+    seccion_aside.style.display = "block";
+    aside_texto.style.width = "100vw";
+    seccion_aside.style.height = "80vh";
+    seccion_aside.style.marginTop = "24vh";
+  } else {
+    seccion_aside.style.display = "block";
+    aside_texto.style.width = ""; 
+    aside_texto.style.height = "";
+    seccion_aside.style.marginTop = "0";
+  }
+  
 });
 
 let cambioModo = "Modo claro";
@@ -310,5 +340,52 @@ btn_restablecer_filtros.addEventListener('click', ()=> {
     negativo.value = '0';
     modificarFiltros();
 });
+
+// // BOTON CERRAR ABIR DE LOS ASIDE
+const botonCerrar = document.getElementById('boton_cerrar');
+const botonAbrir = document.getElementById('boton_abrir');
+const container = document.getElementById('container');
+const id_main = document.getElementById('id_main');
+
+
+
+
+// function mostrarAside() {
+//   console.log('abrir');
+  
+//   botonCerrar.classList.toggle('hidden');
+//   botonAbrir.remove('hidden');
+//   container.style.display = 'none';
+//   seccion_aside.style.display ='block'
+  
+  
+// }
+
+// function cerrarAside() {
+//   console.log('cerrar');
+//   botonCerrar.remove('hidden');
+//   botonAbrir.classList.toggle('hidden');
+//   container.style.display = 'block';
+//   seccion_aside.style.display ='hidden'
+// }
+
+// botonAbrir.addEventListener('click', mostrarAside);
+//  botonCerrar.addEventListener('click', cerrarAside);
+
+
+//   botonAbrir.addEventListener('click', () => {
+//     seccion_aside.classList.remove('hidden');
+//     botonAbrir.classList.add('hidden');
+//     botonCerrar.classList.remove('hidden');
+// });
+
+// botonCerrar.addEventListener('click', () => {
+//   seccion_aside.classList.add('hidden');
+//     botonAbrir.classList.remove('hidden');
+//     botonCerrar.classList.add('hidden');
+// });
+
+
+
 
 

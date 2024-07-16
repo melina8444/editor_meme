@@ -82,7 +82,7 @@ main {
   min-height: 100vh;      
   margin: 35px;
   /* background-color: #4d1ddc;  */
-  width:100%; 
+  /* width:100vh;  */
 }
 
 .container {
@@ -100,7 +100,7 @@ main {
   align-items: center;
   background-color: #e9e7ef;
   padding: 20px;           
-  box-sizing: border-box;  
+   
 }
 
 .h2_texto_superior, .h2_texto_inferior {
@@ -138,21 +138,19 @@ main button i {
 }
 
 
-
-aside {
+.seccion_aside {
   position: absolute;
   top: 0;
   right: 0;
-  width: auto;
- 
+  width: 300px;
+  font-size: small;
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
-  height: auto;
+  justify-content:space-between;
+  /* height: 100%; */
   background-color: #abacae;
-  padding: 15px 10px;
-  overflow: auto;
- 
+  padding: 10px 15px;
+  overflow: hidden;
 }
 
 
@@ -168,11 +166,11 @@ select {
 ::placeholder {
   color: #e13e3e;
 }
-aside h3 {
+.seccion_aside h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  /* margin: 20px; */
 }
 .contenedor_colores {
   display: flex;
@@ -181,7 +179,7 @@ aside h3 {
   width: 50%;
   padding: 10px;
 }
-form h4 {
+div h4 {
   margin: 10px auto;
 }
 .margenes {
@@ -219,6 +217,90 @@ aside button {
   margin: 30px;
 }
 
-.aside_imagen{
+.aside_imagen .aside_texto{
   display: none;
+  height: 100%;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .mi_header{
+      width: 100%;
+      
+  }
+  .seccion_aside {
+    width: 100%; /* Ancho completo en dispositivos móviles */
+    display: none;
+  }
+  /* .boton_cerrar {
+      display: flex;
+      justify-content: flex-end;
+      background-color: transparent;
+      color: white;
+      outline: 0;
+      text-decoration: none;
+      border: none;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: right 0.5s;
+    } */
+
+  .aside_imagen, .aside_texto {
+      
+  width: 100vw; /* Ancho completo en dispositivos móviles */
+  width: 300px; /* Ancho fijo para dispositivos de pantalla más amplia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Para centrar texto */
+}
+
+/* 
+.seccion_aside{
+  margin-top: 19%;
+  background-color: blue;
+}
+ */
+
+
+/* .boton_cerrar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  color: white;
+  outline: 0;
+  text-decoration: none;
+  border: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: right 0.5s;
+}
+
+.boton_abrir {
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  color: rgb(234, 61, 61);
+  outline: 0;
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 65px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: right 0.5s;
+} */
+
+
 }
